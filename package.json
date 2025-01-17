@@ -2,7 +2,7 @@
     "name": "remix-route-creator",
     "displayName": "Remix Route Creator",
     "description": "Create nested Remix routes easily",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -45,7 +45,7 @@
         "eslint": "^8.x",
         "typescript": "^4.x"
     },
-    "publisher": "your-publisher-name",
+    "publisher": "megactek",
     "repository": {
         "type": "git",
         "url": "https://github.com/megactek/remix-component-creator-vscode"
