@@ -116,9 +116,9 @@ function validateRouteName(routeName: string): string | null {
     return "Route name cannot be empty";
   }
 
-  if (!/^[a-zA-Z0-9._-]+$/.test(routeName)) {
-    return "Route name can only contain letters, numbers, dots, hyphens and underscores";
-  }
+  // if (!/^[a-zA-Z0-9._-]+$/.test(routeName)) {
+  //   return "Route name can only contain letters, numbers, dots, hyphens and underscores";
+  // }
 
   // Check for valid Remix route naming conventions
   if (routeName.startsWith(".") || routeName.endsWith(".")) {
