@@ -108,7 +108,7 @@ function getComponentName(routeName: string): string {
   return routeName
     .split(".")
     .map((part) => {
-      const newPart = part.replace(/[^.a-zA-Z]/gi, "");
+      const newPart = part.replace(/[^a-zA-Z]/gi, "");
       return newPart.charAt(0).toUpperCase() + newPart.slice(1);
     })
     .join("");
