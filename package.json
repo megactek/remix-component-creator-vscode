@@ -1,0 +1,69 @@
+{
+    "name": "remix-route-creator",
+    "displayName": "Remix Route Creator",
+    "description": "Create nested Remix routes easily",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "remix-route-creator.createRoute",
+                "title": "Create Remix Route...",
+                "category": "Remix"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "explorerResourceIsFolder && resourcePath =~ /routes/",
+                    "command": "remix-route-creator.createRoute",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/node": "^16.x",
+        "@types/vscode": "^1.60.0",
+        "@typescript-eslint/eslint-plugin": "^5.x",
+        "@typescript-eslint/parser": "^5.x",
+        "eslint": "^8.x",
+        "typescript": "^4.x"
+    },
+    "publisher": "your-publisher-name",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/megactek/remix-component-creator-vscode"
+    },
+    "launch": {
+        "configurations": [
+            {
+                "name": "Extension",
+                "type": "extensionHost",
+                "request": "launch",
+                "args": [
+                    "--extensionDevelopmentPath=${workspaceFolder}"
+                ],
+                "outFiles": [
+                    "${workspaceFolder}/out/**/*.js"
+                ],
+                "preLaunchTask": "npm: watch"
+            }
+        ]
+    }
+}
