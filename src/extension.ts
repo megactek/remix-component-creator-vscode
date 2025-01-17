@@ -107,13 +107,10 @@ export function ErrorBoundary() {
 function getComponentName(routeName: string): string {
   return routeName
     .split(".")
-    .map(
-      (part) =>
-        part
-          .replace(/[^a-zA-Z]/gi, "")
-          .charAt(0)
-          .toUpperCase() + part.slice(1)
-    )
+    .map((part) => {
+      const newPart = part.replace(/[^.a-zA-Z]/gi, "");
+      return newPart.charAt(0).toUpperCase() + newPart.slice(1);
+    })
     .join("");
 }
 
